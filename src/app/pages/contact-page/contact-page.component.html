@@ -1,8 +1,0 @@
-<div class="contact-page">
-  <h2 class="title">Contacts</h2>
-  <delete-msg *ngIf="contactId" (answer)="remover($event)" [deleteCmp]="deleteCmp"></delete-msg>
-  <router-outlet></router-outlet>
-  <contact-filter></contact-filter>
-  <i class="material-icons add-btn" routerLink="edit">add</i>
-  <contact-list (removeContact)="removeContact($event)" [contacts]="contacts$ |async"></contact-list>
-</div>
