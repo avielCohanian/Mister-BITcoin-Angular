@@ -1,0 +1,34 @@
+<div class="photo-capture" [ngClass]="!enableCamera?'none':''">
+  <div *ngIf="pickImage">
+    <h2>Upload a clear Photo</h2>
+    <label for="image-picker" class="image-picker">
+      <i class="material-icons">drive_folder_upload</i>
+      <input type="file" accept="image/*" name="image-picker" id="image-picker" (change)="upload($event)" hidden>
+    </label>
+    <div class="upload-actions">
+      <button type="button" class="btn-capture" (click)="done()">
+        <i class="material-icons">thumb_up</i>
+      </button>
+    </div>
+  </div>
+
+
+  <div *ngIf="!pickImage" class="video-container">
+    <video #player class="camera" [ngClass]="!showVideo?'none':''" autoplay playsinline></video>
+    <canvas id="barcode" #canvas class="preview" [ngClass]="showVideo?'none':''"></canvas>
+
+    <div class="center photo-capture-actions">
+      <button type="button" class="btn-capture" (click)="capture()" *ngIf="showVideo">
+        <i class="material-icons">camera_alt</i>
+      </button>
+      <div *ngIf="!showVideo">
+        <button type="button" class="btn-capture" (click)="cancel()">
+          <i class="material-icons">undo</i>
+        </button>
+        <button type="button" class="btn-capture" (click)="done()">
+          <i class="material-icons">thumb_up</i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

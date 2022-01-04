@@ -1,0 +1,38 @@
+$material-design-icons-font-directory-path: "~material-design-icons-iconfont/dist/fonts/";
+@import "~material-design-icons-iconfont/src/material-design-icons";
+
+.contact-page {
+  position: relative;
+  margin-bottom: 15px;
+
+  .add-btn {
+    position: fixed;
+    background: greenyellow;
+    border-radius: 50%;
+    bottom: 20px;
+    right: 20px;
+    font-size: 50px;
+    color: black;
+    border: 0;
+    opacity: 0.6;
+    transition: 0.3s all;
+    padding: 0;
+    cursor: pointer;
+
+    &:disabled {
+      cursor: initial;
+      opacity: 0.2;
+    }
+
+    &:hover:not(:disabled) {
+      opacity: 1;
+      color: whitesmoke;
+      background: #4caf50;
+    }
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 30px;
+  }
+}

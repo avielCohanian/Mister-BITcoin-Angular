@@ -1,0 +1,10 @@
+<article class="contact-preview" [routerLink]="[ contact._id]">
+  <div class="contact-preview-container">
+    <img src="https://robohash.org/{{contact._id}}?set=set4" alt="">
+    <p class="contact-name">{{contact.name}}</p>
+    <div class="btn" (click)="$event.stopPropagation()">
+      <i (click)="removeContact()" class="material-icons delete-btn">delete</i>
+      <i [routerLink]="['/contact/edit/', contact._id]" class="material-icons edit-btn">edit</i>
+    </div>
+  </div>
+</article>

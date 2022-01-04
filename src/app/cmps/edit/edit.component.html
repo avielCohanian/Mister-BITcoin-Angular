@@ -1,0 +1,16 @@
+<section class="edit-screen" routerLink="/contact">
+
+  <form class="simple-form" (click)="$event.stopPropagation()" (ngSubmit)="onSubmit(form)" #form="ngForm"
+    *ngIf="currContact">
+    <i routerLink="/contact" class=" material-icons   back-btn">arrow_back_ios</i>
+
+    <h1>{{title}}</h1>
+
+    <input [(ngModel)]="currContact.name" name="name" placeholder="name" type="text">
+    <input [(ngModel)]="currContact.email" name="email" placeholder="email" type="text">
+
+    <input [(ngModel)]="currContact.phone" name="phone" placeholder="phone" type="text">
+    <button [disabled]="form.invalid" md-button color="primary" type="submit">SUBMIT</button>
+
+  </form>
+</section>

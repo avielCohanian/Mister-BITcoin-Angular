@@ -1,0 +1,10 @@
+<div class="transfer-fund">
+  <h3>Transfer coins to {{currUserName}}</h3>
+  <div class="input-container">
+    <label htmlFor="amount">Amount:</label>
+    <input type="number" name="amount" id="amount" [(ngModel)]="amount" />
+    <button class="simple-button" (click)="transfer()">
+      Transfer
+    </button>
+  </div>
+</div>

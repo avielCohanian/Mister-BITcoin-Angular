@@ -1,0 +1,11 @@
+<div class="moves-list" *ngIf="moves&& moves.length">
+  <h2>{{title}}</h2>
+
+  <div class="card" *ngFor="let move of moves">
+    <b>To:</b> <span>{{move.to}}</span>
+    <br />
+    <b>At:</b>{{move.at|date:'dd/MM/yy EEE '}} <br />
+    <b>Amount:</b> <span>{{move.amount}}</span>
+  </div>
+
+</div>
